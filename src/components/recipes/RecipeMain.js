@@ -1,13 +1,24 @@
 import React from "react";
-import './RecipeMain.css';
-import { RecipeBlock } from "./RecipeBlock";
+import RecipeCard from "./RecipeCard/RecipeCard";
 
 export const RecipeMain = () => {
+  const hardCodedRecipes = [
+    {
+      turkey_burgers: {
+        human_readable_name: "Turkey Burgers",
+      },
+    },
+    {
+      bibimbap: {
+        human_readable_name: "Bibimbap"
+      }
+    }
+  ];
+
   return (
     <div className="recipe-main">
       <h2>Recipe Main</h2>
-      <RecipeBlock></RecipeBlock>
-
+      <RecipeCard></RecipeCard>
     </div>
   );
 };

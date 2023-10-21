@@ -1,0 +1,11 @@
+.recipe-card {
+  border-style: dotted;
+  text-align: center;
+  width: 300px;
+
+}
+
+.recipe-image {
+  width: 200px;
+  height: 200px;
+}
