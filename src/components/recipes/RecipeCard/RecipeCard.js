@@ -1,15 +1,17 @@
 import React from "react";
 import './RecipeCard.css';
 
-import turkey_burger from "../../../assets/turkey-burger.png";
+// import turkey_burger from "../../../assets/turkey-burger.png";
 
 const RecipeCard = (props) => {
+  const recipe = props.recipe;
+
   return (
     <div className="recipe-card">
-      <img className="recipe-image" src={turkey_burger} alt="turkey-burger"></img>
-      <h3>Turkey Burgers !</h3>
+      <h3>{recipe.human_readable_name}</h3>
+      <h4>{recipe.description}</h4>
       <button>Add</button>
-    </div>
+    </div>  
   );
 };
 
