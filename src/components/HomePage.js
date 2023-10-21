@@ -38,11 +38,10 @@ export default function HomePage() {
   ];
 
   const addRecipeHandler = (recipe) => {
-    console.log('recipe added!', recipe)
+    setSelectedRecipes((prevSelectedRecipes) => {
+      return [recipe, ...prevSelectedRecipes]
+    });
   };
-
-  
-
 
   return (
     <div className='homepage'>
@@ -51,7 +50,7 @@ export default function HomePage() {
       </header>
       <div className='recipe-box'>
       <RecipeMain recipes={hardCodedRecipes} addRecipeHandler={addRecipeHandler}></RecipeMain>
-      <Cart></Cart>
+      <Cart selectedRecipes={selectedRecipes}></Cart>
 
       </div>
       <div className='main-box'>      
