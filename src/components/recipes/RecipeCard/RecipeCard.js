@@ -6,11 +6,15 @@ import './RecipeCard.css';
 const RecipeCard = (props) => {
   const recipe = props.recipe;
 
+  const recipeCardAddHandler = () => {
+    props.addRecipeHandler(recipe)
+  }
+
   return (
     <div className="recipe-card">
       <h3>{recipe.human_readable_name}</h3>
       <h4>{recipe.description}</h4>
-      <button>Add</button>
+      <button onClick={recipeCardAddHandler}>Add</button>
     </div>  
   );
 };
