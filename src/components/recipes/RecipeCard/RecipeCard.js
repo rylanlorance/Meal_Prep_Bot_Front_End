@@ -14,9 +14,9 @@ const RecipeCard = (props) => {
 
   return (
     <Card style={{ width: '18rem'}}>
+        <Card.Img variant="top" src="../../../assets/turkey-burger.png" />
       <Card.Body>
         <Card.Title>{recipe.human_readable_name}</Card.Title>
-        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Text>
           {recipe.description}
         </Card.Text>
