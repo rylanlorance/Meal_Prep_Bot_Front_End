@@ -1,55 +1,50 @@
+import { useReducer } from "react";
+
 import RecipeBookContext from "./recipe-book-context";
+import defaultRecipeBookState from "./default-recipe-book-state.js";
+
+function recipeBookReducer(state, action) {
+  console.log("using reducer", state, action);
+  console.log("looking for id", action.id);
+
+  switch (action.type) {
+    case "add_recipe_to_cart":
+        state.items.map((recipe) => {
+          if (recipe.id === action.id) {
+            recipe.in_cart = true;
+          }
+          return recipe;
+        });
+      break;
+    default:
+      console.log("error!");
+  }
+
+  console.log('state new', state)
+  return state
+}
 
 const RecipeBookProvider = (props) => {
-  const defaultRecipeBookContext = {
-    items: [
-      {
-        id: 530147055217345,
-        recipe: {
-          name: "turkey_burgers",
-          human_readable_name: "Turkey Burgers",
-          category: "entree",
-          description: "Turkey Burgers",
-          photo_path: "../../../assets/turkey-burger.png",
-        },
-      },
-      {
-        id: 530147055217347,
-        recipe: {
-          name: "bibimbap",
-          human_readable_name: "Bibimbap",
-          category: "entree",
-          description:
-            "Korean rice dish with ground beef, carrots, and spinach.",
-          photo_path: "../../../assets/bibimbap.png",
-        },
-      },
-      {
-        id: 530147055217348,
-        recipe: {
-          name: "balsamic_sheet_pan_chicken",
-          human_readable_name: "Balsamic Sheet Pan Chicken",
-          category: "breakfast",
-          description: "Rice bowl with balsamic chicken and veggies.",
-          photo_path: "",
-        },
-      },
-      {
-        id: 530147055217348,
-        recipe: {
-          name: "bagel_lox_and_cream_cheese",
-          human_readable_name: "Bagel with Lox and Cream Cheese",
-          category: "breakfast",
-          description: "Bagel with Lox and Cream Cheese",
-          photo_path: "",
-        },
-      },
-    ],
-    number_of_recipes: 4,
+  const [recipeBookState, dispatchRecipeBookAction] = useReducer(
+    recipeBookReducer,
+    defaultRecipeBookState
+  );
+
+  console.log("recipeBookState", recipeBookState);
+
+  const addRecipeToCartHandler = (id) => {
+    console.log("idddd", id);
+    dispatchRecipeBookAction({ type: "add_recipe_to_cart", id: id });
+  };
+
+  const recipeBookContext = {
+    items: recipeBookState.items,
+    numbers_of_recipes: recipeBookState.number_of_recipes,
+    addRecipeToCart: addRecipeToCartHandler,
   };
 
   return (
-    <RecipeBookContext.Provider value={defaultRecipeBookContext}>
+    <RecipeBookContext.Provider value={recipeBookContext}>
       {props.children}
     </RecipeBookContext.Provider>
   );
