@@ -17,7 +17,7 @@ const RecipeBook = () => {
   };
 
   const handleAddRecipeToCart = (recipeId) => {
-    
+    recipeBook.addRecipeToCart(recipeId)
   };
 
   return (
