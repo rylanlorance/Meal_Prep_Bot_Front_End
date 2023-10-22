@@ -37,14 +37,15 @@ const RecipeBookProvider = (props) => {
       {
         id: 530147055217348,
         recipe: {
-          name: "Bagel with Lox and Cream Cheese",
-          human_readable_name: "Balsamic Sheet Pan Chicken",
-          description: "Rice bowl with balsamic chicken and veggies.",
+          name: "bagel_lox_and_cream_cheese",
+          human_readable_name: "Bagel with Lox and Cream Cheese",
+          category: "breakfast",
+          description: "Bagel with Lox and Cream Cheese",
           photo_path: "",
         },
       },
     ],
-    number_of_recipes: 0,
+    number_of_recipes: 4,
   };
 
   return (

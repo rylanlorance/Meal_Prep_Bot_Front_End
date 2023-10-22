@@ -2,17 +2,10 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-// import "./RecipeCard.css";
-
-// import turkey_burger from "../../../assets/turkey-burger.png";
 
 const RecipeCard = (props) => {
   // console.log('props', props)
   const recipe = props.recipe.recipe;
-
-  // const recipeCardAddHandler = () => {
-  //   props.addRecipeHandler(recipe);
-  // };
 
   return (
     <Card style={{ width: "18rem" }}>
