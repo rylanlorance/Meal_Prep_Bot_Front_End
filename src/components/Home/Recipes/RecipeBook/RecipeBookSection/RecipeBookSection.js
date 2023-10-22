@@ -1,20 +1,17 @@
-import React from 'react'
-import RecipeCard from '../RecipeCard/RecipeCard'
+import React from "react";
+import RecipeCard from "../RecipeCard/RecipeCard";
 
 function RecipeBookSection(props) {
-  console.log('props', props)
-
   return (
     <div>
-      {props.recipes.map(item=> (
-        <RecipeCard recipe={item}></RecipeCard>
+      {props.recipes.map((item) => (
+        <RecipeCard
+          recipe={item}
+          addRecipeToCart={props.addRecipeToCart}
+        ></RecipeCard>
       ))}
     </div>
-
-
-
-  )
+  );
 }
 
-
-export default RecipeBookSection
+export default RecipeBookSection;
