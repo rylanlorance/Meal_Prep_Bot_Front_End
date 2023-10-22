@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       <RecipeBookProvider>
         <RecipeNavBar></RecipeNavBar>
-        
         <Home></Home>
       </RecipeBookProvider>
     </div>

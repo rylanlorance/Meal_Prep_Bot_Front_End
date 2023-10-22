@@ -2,12 +2,16 @@ import React, { useContext } from "react";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import RecipeBookContext from "../../../context/recipe-book-context";
+import RecipeBookSection from "./RecipeBookSection/RecipeBookSection";
 
 const RecipeBook = () => {
 
     const recipeBook = useContext(RecipeBookContext);
-
-    console.log('recipeBook component', recipeBook)
+    
+    const recipeBookSegregated = {
+        'breakfast': recipeBook.items.filter(item=> item.recipe.category === 'breakfast'),
+        'entree': recipeBook.items.filter(item=> item.recipe.category === 'entree')
+    }
 
     return (
         <div className="recipe-book">
@@ -15,13 +19,10 @@ const RecipeBook = () => {
             id="tab-example"
             className="mb-3">
                 <Tab eventKey="breakfast" title="Breakfast">
-                    <p>Breakfast</p>
+                    <RecipeBookSection recipes={recipeBookSegregated.breakfast}></RecipeBookSection>
                 </Tab>
-                <Tab eventKey="lunch" title="Lunch">
-                    <p>Lunch</p>
-                </Tab>
-                <Tab eventKey="dinner" title>
-                    <p>Dinner</p>
+                <Tab eventKey="entree" title="Entree">
+                <RecipeBookSection recipes={recipeBookSegregated.entree}></RecipeBookSection>
                 </Tab>
             </Tabs>
         </div>

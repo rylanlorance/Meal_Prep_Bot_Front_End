@@ -1,14 +1,15 @@
 import RecipeBookContext from "./recipe-book-context";
 
 const RecipeBookProvider = (props) => {
-  const defaultCartContext = {
+  const defaultRecipeBookContext = {
     items: [
       {
         id: 530147055217345,
         recipe: {
           name: "turkey_burgers",
           human_readable_name: "Turkey Burgers",
-          description: "Turkey Burgers with Sweet Potatoes and Green Beans ",
+          category: "entree",
+          description: "Turkey Burgers",
           photo_path: "../../../assets/turkey-burger.png",
         },
       },
@@ -17,6 +18,7 @@ const RecipeBookProvider = (props) => {
         recipe: {
           name: "bibimbap",
           human_readable_name: "Bibimbap",
+          category: "entree",
           description:
             "Korean rice dish with ground beef, carrots, and spinach.",
           photo_path: "../../../assets/bibimbap.png",
@@ -27,6 +29,16 @@ const RecipeBookProvider = (props) => {
         recipe: {
           name: "balsamic_sheet_pan_chicken",
           human_readable_name: "Balsamic Sheet Pan Chicken",
+          category: "breakfast",
+          description: "Rice bowl with balsamic chicken and veggies.",
+          photo_path: "",
+        },
+      },
+      {
+        id: 530147055217348,
+        recipe: {
+          name: "Bagel with Lox and Cream Cheese",
+          human_readable_name: "Balsamic Sheet Pan Chicken",
           description: "Rice bowl with balsamic chicken and veggies.",
           photo_path: "",
         },
@@ -36,7 +48,7 @@ const RecipeBookProvider = (props) => {
   };
 
   return (
-    <RecipeBookContext.Provider value={defaultCartContext}>
+    <RecipeBookContext.Provider value={defaultRecipeBookContext}>
       {props.children}
     </RecipeBookContext.Provider>
   );
