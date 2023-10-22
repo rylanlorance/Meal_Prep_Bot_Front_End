@@ -2,11 +2,12 @@ import React from 'react'
 import RecipeCard from '../RecipeCard/RecipeCard'
 
 function RecipeBookSection(props) {
-  
+  console.log('props', props)
+
   return (
     <div>
       {props.recipes.map(item=> (
-        <RecipeCard recipe={props.recipe}></RecipeCard>
+        <RecipeCard recipe={item}></RecipeCard>
       ))}
     </div>
 
