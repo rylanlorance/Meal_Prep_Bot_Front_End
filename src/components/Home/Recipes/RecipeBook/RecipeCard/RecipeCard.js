@@ -2,21 +2,22 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-
 const RecipeCard = (props) => {
   const recipe = props.recipe;
 
   const onButtonClick = () => {
     props.addRecipeToCart(recipe.id);
   }
-
+  const recipeImageStr = `./recipe_images/${recipe.recipe.photo_path}`;
+  
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="../../../assets/turkey-burger.png" />
+      <Card.Img variant="top" src={recipeImageStr} />
       <Card.Body>
         <Card.Title>{recipe.recipe.human_readable_name}</Card.Title>
         <Card.Text>{recipe.recipe.description}</Card.Text>
         <Button variant="primary" onClick={onButtonClick}>Add</Button>
+        <Button variant="secondary">Expand</Button>
       </Card.Body>
     </Card>
   );
