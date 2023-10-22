@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Cart from './recipes/cart/Cart'
-import { RecipeMain } from './recipes/RecipeMain/RecipeMain'
+import Cart from './Old_Components/cart/Cart'
+import { RecipeMain } from './Old_Components/RecipeMain/RecipeMain'
 
 import './Homepage.css'
 

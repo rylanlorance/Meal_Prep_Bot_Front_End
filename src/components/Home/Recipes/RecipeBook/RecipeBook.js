@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import RecipeBookContext from "../../../context/recipe-book-context";
 
 const RecipeBook = () => {
+
+    const recipeBook = useContext(RecipeBookContext);
+
+    console.log('recipeBook component', recipeBook)
+
     return (
         <div className="recipe-book">
             <Tabs defaultActiveKey="breakfast"
