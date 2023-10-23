@@ -1,6 +1,7 @@
 import React from 'react'
 import Cart from './cart/Cart'
 import { RecipeMain } from './recipes/RecipeMain'
+import NewRecipe from './NewRecipe/NewRecipe'
 
 export default function HomePage() {
   return (
@@ -8,8 +9,9 @@ export default function HomePage() {
       <header>
         <h1>Meal Prep Bot</h1>
       </header>
-      <RecipeMain></RecipeMain>
-      <Cart></Cart>
+      {/* <RecipeMain></RecipeMain> */}
+      {/* <Cart></Cart> */}
+      <NewRecipe></NewRecipe>
       <div className='main-box'>      
       </div>
     </div>
