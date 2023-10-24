@@ -9,7 +9,7 @@ const defaultRecipeBookState = {
         description: "Turkey Burgers",
         photo_path: "turkey-burger.png",
       },
-      in_cart: false,
+      in_cart: true,
     },
     {
       id: 530147055217347,

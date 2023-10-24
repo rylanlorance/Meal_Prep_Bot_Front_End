@@ -4,24 +4,30 @@ import RecipeBookContext from "./recipe-book-context";
 import defaultRecipeBookState from "./default-recipe-book-state.js";
 
 function recipeBookReducer(state, action) {
-  console.log("using reducer", state, action);
-  console.log("looking for id", action.id);
+  console.log('state', state)
+  console.log('action', action)
 
-  switch (action.type) {
-    case "add_recipe_to_cart":
-        state.items.map((recipe) => {
-          if (recipe.id === action.id) {
-            recipe.in_cart = true;
-          }
-          return recipe;
-        });
-      break;
-    default:
-      console.log("error!");
+  if (action.type === "add_recipe_to_cart"){
+    const existingRecipeItemIndex = state.items.findIndex((item) => item.id === action.id);
+
+    const existingRecipe = state.items[existingRecipeItemIndex]
+
+    const updatedRecipe = {
+      ...existingRecipe,
+      in_cart: true
+    }
+
+    let updatedItems = [...state.items];
+
+    updatedItems[existingRecipeItemIndex] = updatedRecipe;
+
+    return {
+      items: updatedItems,
+      number_of_recipes: state.number_of_recipes
+    }
   }
 
-  console.log('state new', state)
-  return state
+  // return state
 }
 
 const RecipeBookProvider = (props) => {
@@ -30,10 +36,7 @@ const RecipeBookProvider = (props) => {
     defaultRecipeBookState
   );
 
-  console.log("recipeBookState", recipeBookState);
-
   const addRecipeToCartHandler = (id) => {
-    console.log("idddd", id);
     dispatchRecipeBookAction({ type: "add_recipe_to_cart", id: id });
   };
 
