@@ -3,6 +3,7 @@ import Cart from './Old_Components/cart/Cart'
 import { RecipeMain } from './Old_Components/RecipeMain/RecipeMain'
 
 import './Homepage.css'
+import NewRecipe from './NewRecipe/NewRecipe'
 
 export default function HomePage() {
   const [selectedRecipes, setSelectedRecipes] = useState([]); 
