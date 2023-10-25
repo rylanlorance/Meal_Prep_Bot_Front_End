@@ -9,6 +9,22 @@ const defaultRecipeBookState = {
         description: "Turkey Burgers",
         photo_path: "turkey-burger.png",
       },
+      ingredients: [
+        {
+          id: 1444785091,
+          name: "gluten free hamburger buns",
+          amount: "4 units",
+        },
+        {
+          id: 1444785091,
+          name: "swiss cheese",
+          amount: "4 slices",
+        },
+        {
+          id: 5130806487,
+          name: '"Worcestershire Sauce',
+        }
+      ],
       in_cart: true,
     },
     {

@@ -6,14 +6,36 @@ import Home from "./components/Home/Home";
 import RecipeBookContext from "./components/context/recipe-book-context";
 import RecipeBookProvider from "./components/context/RecipeBookProvider";
 import { useState } from "react";
+import {
+  createBrowserRouter,
+  // createRoutesFromElements,
+  RouterProvider,
+  // Route,
+} from "react-router-dom";
+import Cart from "./components/Cart/Cart";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    { path: '/cart',
+      element: <Cart></Cart>}
+  ]);
 
   return (
     <div className="App">
       <RecipeBookProvider>
-        <RecipeNavBar></RecipeNavBar>
-        <Home></Home>
+        <RouterProvider router={router}>
+          <RecipeNavBar>
+            {/* <Switch>
+            <Route exact path="/">
+            <Home></Home>
+            </Route>
+          </Switch> */}
+          </RecipeNavBar>
+        </RouterProvider>
       </RecipeBookProvider>
     </div>
   );
