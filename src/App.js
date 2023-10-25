@@ -13,6 +13,7 @@ import {
   // Route,
 } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
+import RecipeDetailed from "./components/Home/Recipes/RecipeDetailed/RecipeDetailed";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,8 +21,11 @@ function App() {
       path: "/",
       element: <Home />,
     },
-    { path: '/cart',
-      element: <Cart></Cart>}
+    { path: "/cart", element: <Cart></Cart> },
+    {
+      path: "/recipe",
+      element: <RecipeDetailed />,
+    },
   ]);
 
   return (

@@ -229,3 +229,5 @@ const data = [
     dateModified: null,
   },
 ];
+
+export default data;
