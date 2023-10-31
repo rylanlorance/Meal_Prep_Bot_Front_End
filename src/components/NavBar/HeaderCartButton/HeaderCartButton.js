@@ -1,4 +1,4 @@
-import RecipeBookContext from '../../context/recipe-book-context'
+import RecipeBookContext from '../../context/recipe-book/recipe-book-context'
 
 import React, { useContext } from 'react'
 

@@ -7,7 +7,7 @@ function NewRecipeForm() {
 
   const handleAddInput = () => {
     setIngredientInputs([...ingredientInputs, {ingredient: ""}])
-    console.log('ingredientInputs', ingredientInputs)
+    // console.log('ingredientInputs', ingredientInputs)
   }
 
   const handleChangeInput = (event, index) => {
