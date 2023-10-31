@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import RecipeBookContext from "../../../context/recipe-book-context";
+import RecipeBookContext from "../../../context/recipe-book/recipe-book-context";
 import RecipeBookSection from "./RecipeBookSection/RecipeBookSection";
 
 const RecipeBook = () => {
