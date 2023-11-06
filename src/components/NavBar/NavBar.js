@@ -5,15 +5,14 @@ import { Toolbar, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartButton from "./ShoppingCartButton";
+import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 
 function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton size="large" color="inherit" aria-label="menu">
-            <MenuIcon></MenuIcon>
-          </IconButton>
+          <RestaurantMenuIcon />
           <Typography variant="h4">Moca</Typography>
           <ShoppingCartButton></ShoppingCartButton>
         </Toolbar>

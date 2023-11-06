@@ -1,8 +1,13 @@
 import React from 'react'
 
+import "./SearchBox.css";
+import SearchBoxText from './SearchBoxText/SearchBoxText';
+
 function SearchBox() {
   return (
-    <div>SearchBox</div>
+    <div className='search-box'>
+      <SearchBoxText></SearchBoxText>
+    </div>
   )
 }
 

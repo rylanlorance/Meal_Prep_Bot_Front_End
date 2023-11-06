@@ -14,8 +14,8 @@ function App() {
     <StyledEngineProvider>
       <Container>
         <NavBar />
-        <Subheader />
         <SearchBox></SearchBox>
+        {/* <Subheader /> */}
         <RecipeCard></RecipeCard>
       </Container>
     </StyledEngineProvider>
