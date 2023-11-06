@@ -1,0 +1,12 @@
+.detailed-recipe-item {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detailed-recipe-item-text-box {
+}
+
+.detailed-recipe-item-button-box {
+}
