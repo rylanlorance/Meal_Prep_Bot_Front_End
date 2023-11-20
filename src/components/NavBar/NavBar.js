@@ -10,10 +10,10 @@ import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color="background">
         <Toolbar>
-          <RestaurantMenuIcon />
-          <Typography variant="h4">Moca</Typography>
+          <RestaurantMenuIcon color="primary"/>
+          <Typography variant="h4" color="primary">Moca</Typography>
           <ShoppingCartButton></ShoppingCartButton>
         </Toolbar>
       </AppBar>
