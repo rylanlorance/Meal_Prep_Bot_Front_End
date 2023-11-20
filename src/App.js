@@ -6,19 +6,24 @@ import NavBar from "./components/NavBar/NavBar";
 import RecipeCard from "./components/Recipe/RecipeBook/RecipeCard/RecipeCard";
 import SearchBox from "./components/SearchBox/SearchBox";
 import Subheader from "./components/Subheader/Subheader";
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from "./static/theme";
 
-import { StyledEngineProvider } from "@mui/material/styles";
+import RecipeBook from "./components/Recipe/RecipeBook/RecipeBook";
 
 function App() {
   return (
-    <StyledEngineProvider>
+    <ThemeProvider theme={theme}>
+
       <Container>
         <NavBar />
         <SearchBox></SearchBox>
         {/* <Subheader /> */}
-        <RecipeCard></RecipeCard>
+        <RecipeBook></RecipeBook>
+
+        {/* <RecipeCard></RecipeCard> */}
       </Container>
-    </StyledEngineProvider>
+    </ThemeProvider>
   );
 }
 
