@@ -8,21 +8,33 @@ import SearchBox from "./components/SearchBox/SearchBox";
 import Subheader from "./components/Subheader/Subheader";
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from "./static/theme";
-
+import Home from "./components/Pages/Home/HomePage";
+import { RouterProvider } from "react-router-dom";
 import RecipeBook from "./components/Recipe/RecipeBook/RecipeBook";
+import { createBrowserRouter } from "react-router-dom";
+import RecipePage from "./components/Pages/Recipes/RecipePage";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/recipes", 
+      element: <RecipePage/>
+    }
+  ])
+
   return (
     <ThemeProvider theme={theme}>
-
-      <Container>
-        <NavBar />
-        <SearchBox></SearchBox>
-        {/* <Subheader /> */}
+      <NavBar />
+      <RouterProvider router={router}>
+        {/* <SearchBox></SearchBox>
         <RecipeBook></RecipeBook>
+        <RecipeCard></RecipeCard> */}
+      </RouterProvider>
 
-        {/* <RecipeCard></RecipeCard> */}
-      </Container>
     </ThemeProvider>
   );
 }
