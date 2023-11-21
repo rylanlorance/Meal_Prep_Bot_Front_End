@@ -1,0 +1,20 @@
+.hero-section {
+    background-clip: padding-box;
+}
+
+.hero-header {
+    /* background-color: aquamarine; */
+}
+
+.hero-image {
+    /* background-color: pink; */
+}
+
+.hero-subheader {
+    margin-top: 20px;
+}
+
+.hero-button-box {
+    margin-top: 10px;
+    /* background-color: paleturquoise; */
+} 

@@ -1,9 +1,12 @@
 import React from "react";
+import Hero from "../../Hero/Hero";
+
+import './HomePage.css';
 
 function Home() {
   return (
     <div className="home-page">
-        <h2> Recipe Book</h2>
+      <Hero></Hero>
     </div>
   );
 }
