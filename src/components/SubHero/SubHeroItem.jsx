@@ -1,7 +1,9 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 
-export default function SubHeroItem() {
+export default function SubHeroItem(props) {
+    console.log('props', props)
+
     return (
         <Box sx={{ borderStyle: "dotted",
                     textAlign: "center"}}>
@@ -12,10 +14,10 @@ export default function SubHeroItem() {
                 src="/assets/process1.png">
             </Box>
             <Typography variant='h5' color="primary">
-                Select Recipes
+                {props.processData.header}
             </Typography>
             <Typography variant='h7'>
-                Choose from the RecipeBook Database.
+                {props.processData.subheader}
             </Typography>
         </Box>
     )
