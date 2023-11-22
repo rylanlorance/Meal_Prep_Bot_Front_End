@@ -6,14 +6,18 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartButton from "./ShoppingCartButton";
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import Button from '@mui/material/Button';
 
 function NavBar() {
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="background">
         <Toolbar>
           <RestaurantMenuIcon color="primary"/>
           <Typography variant="h4" color="primary">Moca</Typography>
+          <Button key="recipes" sx={{ }}>Recipes</Button>
+
           <ShoppingCartButton></ShoppingCartButton>
         </Toolbar>
       </AppBar>
