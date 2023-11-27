@@ -44,9 +44,9 @@ function RecipeDetailed(props) {
         <RecipeDetailedInstructions value={tabValue} index={1} recipe={recipe}/>
         <RecipeDetailedNotes value={tabValue} index={2} />
       </Box>
-      {/* <Box className="recipe-detailed-right-box">
+      <Box className="recipe-detailed-right-box">
         <RecipeDetailedRightBox></RecipeDetailedRightBox>
-      </Box> */}
+      </Box>
     </Box>
   );
 }
