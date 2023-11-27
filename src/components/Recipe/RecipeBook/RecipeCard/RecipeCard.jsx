@@ -10,18 +10,20 @@ import Button from '@mui/material/Button';
 import './RecipeCard.css';
 
 function RecipeCard(props) {
+  const recipe = props.recipe;
+
   return (
     <Card className="recipe-card" sx={{ boxShadow:3 }}>
-      <CardHeader title="Turkey Burgers" subheader="September 14, 2016"></CardHeader>
+      <CardHeader title={recipe.title} subheader={recipe.category}></CardHeader>
       <CardMedia
         sx={{height: 200, width: 200}}
         image="recipe_images/turkey-burger.png"
       ></CardMedia>
       <CardContent>
       </CardContent>
-      <CardActions>
-        <Button size="small">
-          Open
+      <CardActions >
+        <Button size="small" variant="contained">
+          Add
         </Button>
       </CardActions>
     </Card>
