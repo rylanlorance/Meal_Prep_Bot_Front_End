@@ -4,8 +4,6 @@ import React from "react";
 function RecipeDetailedInstructions(props) {
   const { value, index, recipe, ...other } = props;
 
-  console.log("recipe", recipe);
-
   return (
     <div
       role="tabpanel"

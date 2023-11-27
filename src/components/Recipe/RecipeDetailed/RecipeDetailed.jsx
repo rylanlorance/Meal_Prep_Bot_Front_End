@@ -11,7 +11,7 @@ import RecipeDetailedRightBox from "./RightBox/RecipeDetailedRightBox";
 function RecipeDetailed(props) {
   const recipe = recipeHardcoded[0];
 
-  const [tabValue, setTabValue] = useState(1);
+  const [tabValue, setTabValue] = useState(0);
 
   function handleTabChange(event, newValue) {
     setTabValue(newValue);
@@ -40,7 +40,7 @@ function RecipeDetailed(props) {
             ></Tab>
           </Tabs>
         </Box>
-        <RecipeDetailedIngredients value={tabValue} index={0} />
+        <RecipeDetailedIngredients value={tabValue} index={0} recipe={recipe}/>
         <RecipeDetailedInstructions value={tabValue} index={1} recipe={recipe}/>
         <RecipeDetailedNotes value={tabValue} index={2} />
       </Box>
