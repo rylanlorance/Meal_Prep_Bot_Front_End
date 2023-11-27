@@ -23,6 +23,7 @@
 			"Finely grated Parmesan (for serving)"
 		],
 		"notes": [],
+		"proteins": ["beef"],
 		"source": "www.epicurious.com",
 		"tags": [
 			"Beef",
@@ -67,6 +68,7 @@
 		],
 		"language": "en-US",
 		"notes": [],
+		"proteins": ["turkey"],
 		"source": "www.epicurious.com",
 		"tags": [
 			"Herb",
@@ -97,6 +99,7 @@
 		],
 		"language": "en-US",
 		"notes": [],
+		"proteins": ["egg"],
 		"source": "allrecipes.com",
 		"tags": [],
 		"title": "Cheesy Egg and Sweet Potato Omelette",

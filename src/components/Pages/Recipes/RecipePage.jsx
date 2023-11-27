@@ -1,11 +1,10 @@
 import React from 'react';
+import RecipeBook from '../../Recipe/RecipeBook/RecipeBook';
 
 
 function RecipePage(props) {
     return (
-        <div className='recipe-page'>
-            <h2>Recipes!</h2>
-        </div>
+        <RecipeBook></RecipeBook>
     );
 }
 
