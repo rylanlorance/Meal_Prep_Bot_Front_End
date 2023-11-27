@@ -11,7 +11,7 @@ import RecipeDetailedRightBox from "./RightBox/RecipeDetailedRightBox";
 function RecipeDetailed(props) {
   const recipe = recipeHardcoded[0];
 
-  const [tabValue, setTabValue] = useState(0);
+  const [tabValue, setTabValue] = useState(1);
 
   function handleTabChange(event, newValue) {
     setTabValue(newValue);

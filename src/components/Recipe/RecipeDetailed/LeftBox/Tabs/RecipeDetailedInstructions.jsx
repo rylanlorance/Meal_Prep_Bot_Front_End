@@ -1,10 +1,12 @@
-import { Typography, Box } from '@mui/material';
-import React from 'react'
+import { Typography, Box } from "@mui/material";
+import React from "react";
 
 function RecipeDetailedInstructions(props) {
-  const {value, index, ...other } = props;
+  const { value, index, recipe, ...other } = props;
 
-    return (
+  console.log("recipe", recipe);
+
+  return (
     <div
       role="tabpanel"
       hidden={value !== index}
@@ -14,12 +16,24 @@ function RecipeDetailedInstructions(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>Instructions</Typography>
+          {recipe.directions.map((step, index) => (
+            <div id={index}>
+              <Typography variant="h6" color="primary">
+                Step {index + 1}
+              </Typography>
+              <Typography variant="h7">
+                {step}
+              </Typography>
+            </div>
+          ))}
+
+          {/* <Typography variant="h6" color="primary">
+            Step 1
+          </Typography> */}
         </Box>
       )}
     </div>
   );
 }
 
-
-export default RecipeDetailedInstructions
+export default RecipeDetailedInstructions;
