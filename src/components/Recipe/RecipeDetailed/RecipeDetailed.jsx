@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import recipeHardcoded from "../../../recipe_harcoded/recipe.json";
 import { Box, Container, Paper, Tab, Tabs, Typography } from "@mui/material";
-import RecipeDetailedIngredients from "./RightBox/Tabs/RecipeDetailedIngredients/RecipeDetailedIngredients";
-import RecipeDetailedInstructions from "./RightBox/Tabs/RecipeDetailedInstructions";
-import RecipeDetailedNotes from "./RightBox/Tabs/RecipeDetailedNotes";
+import RecipeDetailedIngredients from "./LeftBox/Tabs/RecipeDetailedIngredients/RecipeDetailedIngredients";
+import RecipeDetailedInstructions from "./LeftBox/Tabs/RecipeDetailedInstructions";
+import RecipeDetailedNotes from "./LeftBox/Tabs/RecipeDetailedNotes";
 
 import './RecipeDetailed.css';
-import RecipeDetailedRightBox from "./LeftBox/RecipeDetailedRightBox";
+import RecipeDetailedRightBox from "./RightBox/RecipeDetailedRightBox";
 
 function RecipeDetailed(props) {
   const recipe = recipeHardcoded[0];
@@ -41,12 +41,12 @@ function RecipeDetailed(props) {
           </Tabs>
         </Box>
         <RecipeDetailedIngredients value={tabValue} index={0} />
-        <RecipeDetailedInstructions value={tabValue} index={1} />
+        <RecipeDetailedInstructions value={tabValue} index={1} recipe={recipe}/>
         <RecipeDetailedNotes value={tabValue} index={2} />
       </Box>
-      <Box className="recipe-detailed-right-box">
+      {/* <Box className="recipe-detailed-right-box">
         <RecipeDetailedRightBox></RecipeDetailedRightBox>
-      </Box>
+      </Box> */}
     </Box>
   );
 }
