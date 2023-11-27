@@ -21,7 +21,7 @@ function RecipeCard(props) {
       </CardContent>
       <CardActions>
         <Button size="small">
-          Share
+          Open
         </Button>
       </CardActions>
     </Card>

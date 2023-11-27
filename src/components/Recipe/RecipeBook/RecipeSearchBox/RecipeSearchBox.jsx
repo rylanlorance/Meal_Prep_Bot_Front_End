@@ -1,6 +1,8 @@
 import {
   Box,
   Button,
+  Chip,
+  Divider,
   FormControl,
   Grid,
   InputLabel,
@@ -21,75 +23,52 @@ function RecipeSearchBox(props) {
   const hardCodedProteins = ["chicken", "beef", "pork", "duck"];
 
   return (
-    <Grid container mt="5px">
-      <Grid item xs={5}>
-        <FormControl fullWidth>
-          <TextField
-            id="recipe-search-bar"
-            label="Search Recipes Here"
-            labelid="recipe-search-bar-label"
-            variant="outlined"
-          ></TextField>
-        </FormControl>
-      </Grid>
-      <Grid item xs={2}>
-        <FormControl fullWidth>
-          <InputLabel id="select-recipe-category-label">Category</InputLabel>
-          <Select
-            id="recipe-category-selector-tool"
-            labelid="select-recipe-category-label"
-            value={categoryFilter}
-            label="Category"
-            onChange={setCategoryFilter}
-          >
-            <MenuItem value="entree">Entree</MenuItem>
-            <MenuItem value="side">Side</MenuItem>
-          </Select>
-        </FormControl>
-      </Grid>
-      <Grid item xs={2}>
-        <FormControl fullWidth>
-          <InputLabel id="select-recipe-protein-label">Protein</InputLabel>
+    <Box>
+      <Grid container mt="5px" className="recipe-searchbox-form">
+        <Grid item xs={5}>
+          <FormControl fullWidth>
+            <TextField
+              id="recipe-search-bar"
+              label="Search Recipes Here"
+              labelid="recipe-search-bar-label"
+              variant="outlined"
+            ></TextField>
+          </FormControl>
+        </Grid>
+        <Grid item xs={2}>
+          <FormControl fullWidth>
+            <InputLabel id="select-recipe-category-label">Category</InputLabel>
+            <Select
+              id="recipe-category-selector-tool"
+              labelid="select-recipe-category-label"
+              value={categoryFilter}
+              label="Category"
+              onChange={setCategoryFilter}
+            >
+              <MenuItem value="entree">Entree</MenuItem>
+              <MenuItem value="side">Side</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
+        <Grid item xs={2}>
+          <FormControl fullWidth>
+            <InputLabel id="select-recipe-protein-label">Protein</InputLabel>
 
-          <Select
-            label-id="select-protein-category"
-            id="protein-category-selector-tool"
-            value={proteinCategoryFilter}
-            label="Category"
-          ></Select>
-        </FormControl>
+            <Select
+              label-id="select-protein-category"
+              id="protein-category-selector-tool"
+              value={proteinCategoryFilter}
+              label="Category"
+            ></Select>
+          </FormControl>
+        </Grid>
       </Grid>
 
-      {/* <Select
-          id="recipe-category-selector-tool"
-          labelId="select-recipe-category-label"
-          value={categoryFilter}
-          label="Category"
-          onChange={setCategoryFilter}
-        >
-          <MenuItem value="entree">Entree</MenuItem>
-          <MenuItem value="side">Side</MenuItem>
-        </Select> */}
+      <Grid className="recipe-searchbox-tags">
+        <Chip label="Dinner"></Chip>
+      </Grid>
 
-      {/* <InputLabel id="demo-simple-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          label="Age"
-        >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select> */}
-      {/* <Select
-          label-id="select-protein-category"
-          id="protein-category-selector-tool"
-          value={proteinCategoryFilter}
-          label="Category"
-        ></Select>
-        <Button variant="contained">Search</Button> */}
-      {/* </FormControl> */}
-    </Grid>
+    </Box>
   );
 }
 
