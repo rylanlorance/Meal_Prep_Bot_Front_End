@@ -7,14 +7,14 @@ function RecipeDetailedIngredients(props) {
   return (
     <div
       role="tabpanel"
-      hidden={value !== index}
+      hidden={value !== index} 
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>Ingredients</Typography>
+          
         </Box>
       )}
     </div>
