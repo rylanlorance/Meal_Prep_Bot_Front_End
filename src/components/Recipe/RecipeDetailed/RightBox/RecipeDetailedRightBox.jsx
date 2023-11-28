@@ -1,6 +1,6 @@
 import { Box, Chip, Typography } from "@mui/material";
 import React from "react";
-import recipeImage from "../../../../assets/bolognese.jpg";
+import recipeImage from "../../../../assets/recipe_images/bolegnese.jpg";
 
 import '../RecipeDetailed.css';
 

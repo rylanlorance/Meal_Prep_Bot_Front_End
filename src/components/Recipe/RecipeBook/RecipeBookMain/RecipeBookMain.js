@@ -1,6 +1,6 @@
 import React from "react";
 import RecipeCard from "../RecipeCard/RecipeCard";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Button } from "@mui/material";
 
 export default function RecipeBookMain(props) {
   // console.log("props", props);
@@ -14,6 +14,9 @@ export default function RecipeBookMain(props) {
           </Grid>
         ))}
       </Grid>
+      <Box mt="20px" sx={{textAlign: "center"}}>
+        <Button variant="outlined">Load More</Button>
+      </Box>
     </Box>
   );
 }
