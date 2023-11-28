@@ -13,6 +13,7 @@ import RecipeBook from "./components/Recipe/RecipeBook/RecipeBook";
 import { createBrowserRouter } from "react-router-dom";
 import RecipePage from "./components/Pages/Recipes/RecipePage";
 import RecipeDetailed from "./components/Recipe/RecipeDetailed/RecipeDetailed";
+import CartProvider from "./context/Cart/CartProvider";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,12 +33,14 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <NavBar />
-      <RouterProvider router={router}>
-        {/* <SearchBox></SearchBox>
+      <CartProvider>
+        <NavBar />
+        <RouterProvider router={router}>
+          {/* <SearchBox></SearchBox>
         <RecipeBook></RecipeBook>
-        <RecipeCard></RecipeCard> */}
-      </RouterProvider>
+      <RecipeCard></RecipeCard> */}
+        </RouterProvider>
+      </CartProvider>
     </ThemeProvider>
   );
 }
