@@ -8,7 +8,7 @@ function ShoppingCartButton() {
   return (
     <div className="shopping-cart-btn">
       <IconButton size="large" color="inherit" aria-label="menu">
-        <span class="cart-ctr">1</span>
+        <span className="cart-ctr">1</span>
         <ShoppingCartIcon className="moca-cart-icon"></ShoppingCartIcon>
       </IconButton>
     </div>
