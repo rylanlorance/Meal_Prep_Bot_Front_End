@@ -7,7 +7,6 @@ function RecipeDetailedRightBox() {
 
   const recipeImageUrl = `http://localhost:8585/images/mushroom-risotto.jpg`
 
-
   return (
     <Box className="recipe-detailed-img">
       <Box
