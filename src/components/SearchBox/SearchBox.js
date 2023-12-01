@@ -1,6 +1,7 @@
-import React from 'react'
+import './SearchBox.css';
 
-import "./SearchBox.css";
+import React from 'react';
+
 import SearchBoxText from './SearchBoxText/SearchBoxText';
 
 function SearchBox() {
@@ -8,7 +9,7 @@ function SearchBox() {
     <div className='search-box'>
       <SearchBoxText></SearchBoxText>
     </div>
-  )
+  );
 }
 
-export default SearchBox
+export default SearchBox;

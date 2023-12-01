@@ -1,11 +1,10 @@
-import { Box, Chip, Typography } from "@mui/material";
-import React from "react";
-
 import '../RecipeDetailed.css';
 
-function RecipeDetailedRightBox() {
+import {Box, Typography} from '@mui/material';
+import React from 'react';
 
-  const recipeImageUrl = `http://localhost:8585/images/mushroom-risotto.jpg`
+function RecipeDetailedRightBox() {
+  const recipeImageUrl = `http://localhost:8585/images/mushroom-risotto.jpg`;
 
   return (
     <Box className="recipe-detailed-img">
@@ -16,7 +15,7 @@ function RecipeDetailedRightBox() {
         alt="Food Image."
         src={recipeImageUrl}
         sx={{
-          borderRadius: '16px'  
+          borderRadius: '16px',
         }}
       ></Box>
 
@@ -30,7 +29,7 @@ function RecipeDetailedRightBox() {
         <Typography variant="h7" display="block">
           URL: INSERT HERE
         </Typography>
-        </div>
+      </div>
     </Box>
   );
 }

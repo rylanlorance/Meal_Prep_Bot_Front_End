@@ -1,9 +1,10 @@
-import React from "react";
-import RecipeCard from "../RecipeCard/RecipeCard";
-import { Box, Grid, Button } from "@mui/material";
+import {Box, Button, Grid} from '@mui/material';
+import React from 'react';
+
+import RecipeCard from '../RecipeCard/RecipeCard';
 
 export default function RecipeBookMain(props) {
-  console.log("props", props);
+  console.log('props', props);
 
   return (
     <Box ml="10px">
@@ -14,7 +15,7 @@ export default function RecipeBookMain(props) {
           </Grid>
         ))}
       </Grid>
-      <Box mt="20px" sx={{textAlign: "center"}}>
+      <Box mt="20px" sx={{textAlign: 'center'}}>
         <Button variant="outlined">Load More</Button>
       </Box>
     </Box>
