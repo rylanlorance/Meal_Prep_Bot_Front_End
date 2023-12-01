@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 import Button from '@mui/material/Button';
 
 function AddRecipeBtn() {
@@ -8,7 +9,7 @@ function AddRecipeBtn() {
         Add Recipe
       </Button>
     </div>
-  )
+  );
 }
 
-export default AddRecipeBtn
+export default AddRecipeBtn;

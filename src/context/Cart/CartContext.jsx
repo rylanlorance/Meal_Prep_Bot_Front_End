@@ -1,4 +1,5 @@
-import { createContext, useReducer } from "react";
+import {createContext, useReducer} from 'react';
+import React from 'react';
 
 const CartContext = createContext({
   items: [],
@@ -8,23 +9,23 @@ const CartContext = createContext({
 });
 
 function cartReducer(state, action) {
-  console.log("state", state);
-  console.log("action", action);
+  console.log('state', state);
+  console.log('action', action);
 }
 
-export function CartContextProvider({ children }) {
-  const [cart, dispatchCartAction] = useReducer(cartReducer, { items: [] });
+export function CartContextProvider({children}) {
+  const [cart, dispatchCartAction] = useReducer(cartReducer, {items: []});
 
   function addItem(item) {
-    dispatchCartAction({ type: "ADD_ITEM", item });
+    dispatchCartAction({type: 'ADD_ITEM', item});
   }
 
   function removeItem(id) {
-    dispatchCartAction({ type: "REMOVE_ITEM", id });
+    dispatchCartAction({type: 'REMOVE_ITEM', id});
   }
 
   function clearCart() {
-    dispatchCartAction({ type: "CLEAR_CART" });
+    dispatchCartAction({type: 'CLEAR_CART'});
   }
 
   const cartContext = {

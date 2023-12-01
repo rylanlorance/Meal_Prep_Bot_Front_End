@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from 'axios';
+import {useEffect, useState} from 'react';
 
 export default function useFetch(method, url, body) {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,12 +17,11 @@ export default function useFetch(method, url, body) {
         });
 
         const data = await resp?.data;
-        console.log('innter data', resp)
+        console.log('innter data', resp);
 
         setApiData(data);
         setIsLoading(false);
       } catch (error) {
-
         setServerError(error);
         setIsLoading(false);
       }
@@ -31,5 +30,5 @@ export default function useFetch(method, url, body) {
     fetchData();
   }, [url, method, body]);
 
-  return { isLoading, apiData, serverError };
+  return {isLoading, apiData, serverError};
 }

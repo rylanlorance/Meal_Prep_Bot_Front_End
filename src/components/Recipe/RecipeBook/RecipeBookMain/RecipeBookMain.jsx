@@ -1,5 +1,6 @@
-import {Box, Button, Grid} from '@mui/material';
 import React from 'react';
+
+import {Box, Button, Grid} from '@mui/material';
 
 import RecipeCard from '../RecipeCard/RecipeCard';
 

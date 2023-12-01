@@ -1,8 +1,9 @@
-import React from "react";
-import { Button, TextField } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import React from 'react';
 
-import "./SearchBoxText.css"
+import SearchIcon from '@mui/icons-material/Search';
+import {Button, TextField} from '@mui/material';
+
+import './SearchBoxText.css';
 
 function SearchBoxText() {
   return (

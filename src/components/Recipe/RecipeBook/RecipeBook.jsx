@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import { Box, Divider, Typography } from "@mui/material";
-import data from "../../../recipe_harcoded/recipe.json";
-import RecipeCard from "./RecipeCard/RecipeCard";
-import RecipeSearchBox from "./RecipeSearchBox/RecipeSearchBox";
-import RecipeBookMain from "./RecipeBookMain/RecipeBookMain";
-import useFetch from "../../../hooks/useFetch";
+import React, {useState} from 'react';
+
+import {Box, Divider, Typography} from '@mui/material';
+
+import useFetch from '../../../hooks/useFetch';
+import data from '../../../recipe_harcoded/recipe.json';
+
+import RecipeBookMain from './RecipeBookMain/RecipeBookMain';
+import RecipeCard from './RecipeCard/RecipeCard';
+import RecipeSearchBox from './RecipeSearchBox/RecipeSearchBox';
 
 function RecipeBook(props) {
   const [searchResults, setSearchResults] = useState();
@@ -13,13 +16,13 @@ function RecipeBook(props) {
     isLoading,
     serverError,
     apiData = {
-      recipes: []
+      recipes: [],
     },
-  } = useFetch("GET", "http://localhost:8585/recipes", "");
+  } = useFetch('GET', 'http://localhost:8585/recipes', '');
 
-  console.log('isLoading', isLoading)
-  console.log('serverError', serverError)
-  console.log('apiData', apiData)
+  console.log('isLoading', isLoading);
+  console.log('serverError', serverError);
+  console.log('apiData', apiData);
 
   // setSearchResults()
   return (
