@@ -11,6 +11,7 @@ import './RecipeCard.css';
 
 function RecipeCard(props) {
   const recipe = props.recipe;
+  const recipeImageUrl = `http://localhost:8585/images/mushroom-risotto.jpg`
 
   return (
     <Card className="recipe-card" sx={{ boxShadow: 3, minHeight: "430px", minWidth: "250px" }}>
@@ -18,7 +19,7 @@ function RecipeCard(props) {
       <CardMedia
         sx={{ height: 250, width: 250, objectFit: "cover"
         }}
-        image={recipe.image_url}
+        image={recipeImageUrl}
       ></CardMedia>
       <CardContent>
       </CardContent>

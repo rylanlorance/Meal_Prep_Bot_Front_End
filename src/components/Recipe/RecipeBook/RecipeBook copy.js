@@ -12,13 +12,12 @@ function RecipeBook(props) {
   const {
     isLoading,
     serverError,
-    apiData = {
-      recipes: []
-    },
+    apiData = [],
   } = useFetch("GET", "http://localhost:8585/recipes", "");
 
   console.log('isLoading', isLoading)
   console.log('serverError', serverError)
+  console.log('blah')
   console.log('apiData', apiData)
 
   // setSearchResults()
@@ -26,7 +25,7 @@ function RecipeBook(props) {
     <div>
       <RecipeSearchBox></RecipeSearchBox>
       <hr></hr>
-      {isLoading && <span>Loading.....</span>}
+      {/* {isLoading && <span>Loading.....</span>}
       {!isLoading && serverError ? (
         <span>Error in fetching data ...</span>
       ) : (
@@ -36,7 +35,7 @@ function RecipeBook(props) {
           <span>{JSON.stringify(recipes)}</span> */}
           <RecipeBookMain recipes={apiData.recipes}></RecipeBookMain>
         </div>
-      )}
+      )} */}
 
       {/* {(recipes && recipes.length > 0) && (
         <RecipeBookMain></RecipeBookMain>
