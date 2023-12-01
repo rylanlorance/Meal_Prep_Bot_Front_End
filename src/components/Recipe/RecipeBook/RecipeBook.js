@@ -31,9 +31,6 @@ function RecipeBook(props) {
         <span>Error in fetching data ...</span>
       ) : (
         <div>
-          {/* <span>{JSON.stringify(recipes)}</span>} */}
-          {/* <span>{JSON.stringify(apiData)}</span>
-          <span>{JSON.stringify(recipes)}</span> */}
           <RecipeBookMain recipes={apiData.recipes}></RecipeBookMain>
         </div>
       )}

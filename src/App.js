@@ -26,7 +26,7 @@ function App() {
       element: <RecipePage />,
     },
     {
-      path: "/recipe-detailed",
+      path: "recipe-detailed/:recipe_id",
       element: <RecipeDetailed />,
     },
   ]);

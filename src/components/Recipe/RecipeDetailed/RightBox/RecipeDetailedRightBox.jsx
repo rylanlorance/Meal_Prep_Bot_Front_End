@@ -1,10 +1,13 @@
 import { Box, Chip, Typography } from "@mui/material";
 import React from "react";
-import recipeImage from "../../../../assets/recipe_images/bolegnese.jpg";
 
 import '../RecipeDetailed.css';
 
 function RecipeDetailedRightBox() {
+
+  const recipeImageUrl = `http://localhost:8585/images/mushroom-risotto.jpg`
+
+
   return (
     <Box className="recipe-detailed-img">
       <Box
@@ -12,7 +15,7 @@ function RecipeDetailedRightBox() {
         width={450}
         component="img"
         alt="Food Image."
-        src={recipeImage}
+        src={recipeImageUrl}
         sx={{
           borderRadius: '16px'  
         }}
