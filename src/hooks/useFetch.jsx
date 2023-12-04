@@ -1,10 +1,12 @@
-import axios from 'axios';
 import {useEffect, useState} from 'react';
+import axios from 'axios';
 
 export default function useFetch(method, url, body) {
   const [isLoading, setIsLoading] = useState(false);
   const [apiData, setApiData] = useState();
   const [serverError, setServerError] = useState(null);
+
+  console.log('using fetch');
 
   useEffect(() => {
     setIsLoading(true);
@@ -24,6 +26,7 @@ export default function useFetch(method, url, body) {
       } catch (error) {
         setServerError(error);
         setIsLoading(false);
+        console.log('error!', error);
       }
     };
 
