@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {
@@ -11,6 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 
+import CartContext from '../../../context/Cart/CartContext';
 import useFetch from '../../../hooks/useFetch';
 import recipeHardcoded from '../../../recipe_harcoded/recipe.json';
 
@@ -23,6 +24,8 @@ import './RecipeDetailed.css';
 
 function RecipeDetailed() {
   const {recipe_id} = useParams();
+
+  const cartCtx = useContext(CartContext);
 
   const url = `http://localhost:8585/recipe/${recipe_id}`;
 
@@ -79,6 +82,7 @@ function RecipeDetailed() {
               value={tabValue}
               index={0}
               recipe={apiData.recipe}
+              OnAddItemToCart={cartCtx.addItem}
             />
             <RecipeDetailedInstructions
               value={tabValue}

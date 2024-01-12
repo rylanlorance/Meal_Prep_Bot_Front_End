@@ -10,7 +10,14 @@ const CartContext = createContext({
 
 function cartReducer(state, action) {
   console.log('state', state);
+
+  console.log('state', state);
   console.log('action', action);
+
+  const currentItems = [...state.items];
+
+
+  console.log('updatedItems', updatedItems);
 }
 
 export function CartContextProvider({children}) {
